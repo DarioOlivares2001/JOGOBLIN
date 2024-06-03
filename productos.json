@@ -35,5 +35,23 @@
         "nombre" : "HotBox",
         "precio" : 19990,
         "image" : "images/6.png"
+    },
+    {
+        "id" : 7,
+        "nombre" : "HotOnes",
+        "precio" : 19990,
+        "image" : "images/7.png"
+    },
+    {
+        "id" : 8,
+        "nombre" : "Hues and Cues",
+        "precio" : 19990,
+        "image" : "images/8.png"
+    },
+    {
+        "id" : 9,
+        "nombre" : "Match MadNess",
+        "precio" : 19990,
+        "image" : "images/9.png"
     }
 ]
