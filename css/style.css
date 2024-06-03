@@ -1,0 +1,317 @@
+body{
+    margin: 0;
+    font-family: Poppins;
+}
+.container{
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+svg{
+    width: 20px;
+}
+.icon-cart{
+    position: relative;
+}
+.icon-user{
+    position: relative;
+
+}
+.icon-cart span{
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: 40%;
+    right: -10px;
+    line-height: 20px; 
+    font-size: 12px; 
+}
+.listaProductos .item img{
+    width: 90%;
+    /*filter: drop-shadow(0 50px 20px #0009);*/
+}
+.listaProductos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listaProductos .item{
+    background-color: #e0dac0;
+    padding: 20px;
+    border-radius: 20px;
+}
+.listaProductos .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listaProductos .item .precio{
+    letter-spacing: 1px;
+    font-size: small;
+}
+.listaProductos .item button{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* cart */
+.carrito{
+    width: 400px;
+    max-width: 100%;
+    background-color: #232324;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .carrito{
+    right: 0;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+.carrito h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.carrito .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.carrito button{
+    background-color: #ffffff;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carrito .close{
+    background-color: #eee;
+}
+.listarCarro .item img{
+    width: 100%;
+}
+.listarCarro .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listarCarro{
+    overflow: auto;
+}
+.listarCarro .cantidad span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listarCarro .cantidad span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listarCarro .item:nth-child(even){
+    background-color: #eee1;
+}
+.listarCarro{
+    overflow: auto;
+}
+.listarCarro::-webkit-scrollbar{
+    width: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .listaProductos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .detail{
+        grid-template-columns:  40% 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .listaProductos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .detail{
+        text-align: center;
+        grid-template-columns: 1fr;
+    }
+    .detail .image img{
+        width: unset;
+        height: 40vh;
+    } 
+    .detail .name{
+        font-size: x-large;
+        margin: 0;
+
+    }
+    .detail .buttons button{
+        font-size: small;
+    }
+    .detail .buttons{
+        justify-content: center;
+    }
+    .listCart .deleteIcon {
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+.icon-user {
+    cursor: pointer;
+}
+
+.icon-user svg {
+    width: 24px;
+    height: 24px;
+}
+.dropdown-menu {
+    right: 0;
+    left: auto;
+    transform: translateX(-10%);
+}
+.delete {
+    margin-left: 10px;
+}
+
+.deleteIcon {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+}
+
+table tr td{
+    vertical-align: middle;
+}
+
+td button{
+    margin: 40px;
+}
+
+td button i{
+    font-size: 40px;
+}
+
+
+.modal-header{
+    background: #0d6efd;
+    color: #fff;
+}
+
+.modal-body form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.modal-body form .imgholder{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imgholder .upload{
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload i{
+    color: #fff;
+    font-size: 35px;
+}
+
+.imgholder:hover .upload{
+    display: flex;
+}
+
+.imgholder .upload input{
+    display: none;
+}
+
+.modal-body form .inputField{
+    flex-basis: 68%;
+    border-left: 5px groove blue;
+    padding-left: 20px;
+}
+
+form .inputField > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+form .inputField > div label{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#userForm form .inputField > div label::after{
+    content: "*";
+    color: red;
+}
+
+form .inputField > div input{
+    width: 75%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid blue;
+}
+
+.modal-footer .submit{
+    font-size: 18px;
+}
+
+
+#readData form .inputField > div input{
+    color: #000;
+    font-size: 18px;
+}
